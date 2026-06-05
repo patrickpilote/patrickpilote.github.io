@@ -18,11 +18,12 @@
   --orange: #ff6b2b;
 }
 * { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; scroll-padding-top: 80px; }
 body { font-family: 'Outfit', sans-serif; background: var(--noir); color: var(--blanc); overflow-x: hidden; }
 
 nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  -webkit-transform: translateZ(0);
   display: flex; justify-content: space-between; align-items: center;
   padding: 1.2rem 4rem;
   background: rgba(10,10,15,0.85);
@@ -178,6 +179,7 @@ h1 { animation-delay: 0.2s; }
 [data-lang-inline].active { display: inline; }
 
 @media (max-width: 900px) {
+  .hero { padding-top: 100px !important; min-height: 100svh; }
   nav { padding: 1rem 1.5rem; }
   .nav-links { display: none; }
   section { padding: 4rem 1.5rem; }
@@ -219,7 +221,10 @@ h1 { animation-delay: 0.2s; }
       <span data-lang="fr" class="active">Génie Conseil · Transformation Numérique</span>
       <span data-lang="en">IT Consulting · Digital Transformation</span>
     </div>
-    <h1>Modernisez.<br><em>Intégrez.</em><br>Livrez.</h1>
+    <h1>
+      <span data-lang="fr" class="active">Modernisez.<br><em>Intégrez.</em><br>Livrez.</span>
+      <span data-lang="en">Modernize.<br><em>Integrate.</em><br>Deliver.</span>
+    </h1>
     <p class="hero-sub">
       <span data-lang="fr" class="active">Vos opérations, simplifiées. <strong>Livrez mieux pour vos clients.</strong><br>Plus de <span id="exp-years"></span> ans d'expérience en TI pour les secteurs de la construction (énergie, infrastructure, mines et métallurgie et pétrole et gaz), santé et financier.</span>
       <span data-lang="en">Your operations, simplified. <strong>Deliver better for your clients.</strong><br>Over <span id="exp-years-en"></span> years of IT experience in construction (energy, infrastructure, mining and metallurgy, oil and gas), health and financial sectors.</span>
